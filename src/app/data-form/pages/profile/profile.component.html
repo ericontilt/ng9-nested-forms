@@ -1,0 +1,8 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <app-basic-info formControlName="basicInfo"></app-basic-info>
+  <app-address formControlName="address"></app-address>
+
+  <button type="submit" [disabled]="profileForm.invalid" class="btn btn-primary">Submit</button>
+
+  <p>{{ profileForm.value | json }}</p>
+</form>
